@@ -17,6 +17,9 @@ def convert_line_to_mp3(text, output_file_path):
     engine.runAndWait()
 
 def convert_dir_to_mp3(input_directory, output_directory):
+    if not os.path.exists(input_directory):
+        print('Input directory does not exist')
+        sys.exit(1)
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
     for root, dirs, files in os.walk(input_directory):
