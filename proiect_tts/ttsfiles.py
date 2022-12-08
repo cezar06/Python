@@ -26,9 +26,7 @@ def convert_dir_to_mp3(input_directory, output_directory):
                 with open(file_path, 'r') as f:
                     lines = f.readlines()
                     for line in lines:
-                        print(line)
                         line = line.strip()
-                        print(line)
                         if len(line) == 0:
                             continue
                         if is_valid_file_name(line):
